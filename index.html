@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Plano de 4 Semanas | Xixi e Cocô no Lugar Certo</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fffaf5;
+      color: #242424;
+      line-height: 1.5;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* HERO */
+
+    .hero {
+      text-align: center;
+      padding: 60px 0 45px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #fff0df;
+      color: #e87518;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #e87518;
+    }
+
+    .subheadline {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      font-size: 19px;
+      color: #555;
+    }
+
+    .cta {
+      display: inline-block;
+      background: #e87518;
+      color: #fff;
+      text-decoration: none;
+      font-size: 19px;
+      font-weight: 700;
+      padding: 17px 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 0 #c85f0e;
+      transition: .2s;
+    }
+
+    .cta:hover {
+      transform: translateY(2px);
+      box-shadow: 0 3px 0 #c85f0e;
+    }
+
+    /* PROBLEMA */
+
+    .problem {
+      background: #242424;
+      color: #fff;
+      padding: 50px 0;
+    }
+
+    .problem h2 {
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 22px;
+      text-align: center;
+    }
+
+    .problem p {
+      color: #ddd;
+      font-size: 17px;
+      margin-bottom: 15px;
+    }
+
+    .problem ul {
+      margin: 20px 0 25px;
+      padding-left: 22px;
+    }
+
+    .problem li {
+      margin-bottom: 11px;
+      color: #fff;
+    }
+
+    /* SOLUÇÃO */
+
+    .section {
+      padding: 50px 0;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .solution {
+      background: #fff;
+    }
+
+    .solution-intro {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 30px;
+      font-size: 17px;
+      color: #555;
+    }
+
+    /* 4 SEMANAS */
+
+    .weeks {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .week {
+      background: #fffaf5;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .week strong {
+      display: block;
+      color: #e87518;
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .week p {
+      color: #555;
+      font-size: 15px;
+    }
+
+    /* O QUE VAI APRENDER */
+
+    .learn {
+      background: #fff0df;
+    }
+
+    .learn-list {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .learn-item {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px 18px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    /* CTA FINAL */
+
+    .final {
+      text-align: center;
+      padding: 60px 0 70px;
+    }
+
+    .final h2 {
+      font-size: 31px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .final p {
+      max-width: 600px;
+      margin: 0 auto 25px;
+      color: #555;
+      font-size: 17px;
+    }
+
+    .note {
+      margin-top: 18px !important;
+      font-size: 13px !important;
+      color: #777 !important;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      .hero {
+        padding: 45px 0 35px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .subheadline {
+        font-size: 17px;
+      }
+
+      .problem h2,
+      .section h2,
+      .final h2 {
+        font-size: 26px;
+      }
+
+      .weeks {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        width: 100%;
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PRIMEIRA TELA -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="tag">
+        PLANO DE 4 SEMANAS
+      </div>
+
+      <h1>
+        Ensine seu cachorro a fazer
+        <span>xixi e cocô no lugar certo</span>
+      </h1>
+
+      <p class="subheadline">
+        Um método organizado para reduzir os erros pela casa
+        e ensinar seu cachorro a usar o banheiro certo.
+      </p>
+
+      <a href="#comprar" class="cta">
+        QUERO APRENDER O MÉTODO
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROBLEMA -->
+
+  <section class="problem">
+
+    <div class="container">
+
+      <h2>
+        Seu cachorro ainda erra xixi e cocô pela casa?
+      </h2>
+
+      <p>
+        Você coloca o tapete, mostra o lugar certo e,
+        mesmo assim, ele continua fazendo onde não deveria?
+      </p>
+
+      <p>
+        Talvez o problema não seja falta de vontade de aprender.
+        Pode ser que o treinamento esteja sendo conduzido da maneira errada.
+      </p>
+
+      <ul>
+
+        <li>Ele acerta algumas vezes e depois volta a errar.</li>
+
+        <li>Faz xixi no tapete da sala ou em outros lugares.</li>
+
+        <li>Acerta quando está restrito, mas erra quando fica solto.</li>
+
+        <li>Você não sabe quando pode aumentar a liberdade.</li>
+
+      </ul>
+
+      <p>
+        Foi para resolver exatamente esse tipo de situação que
+        eu organizei meu método em um plano simples e progressivo.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- PLANO -->
+
+  <section class="section solution">
+
+    <div class="container">
+
+      <h2>
+        Conheça o Plano de 4 Semanas
+      </h2>
+
+      <p class="solution-intro">
+        Eu organizei meu método em etapas para você saber
+        o que fazer, acompanhar os acertos e entender
+        quando é hora de avançar.
+      </p>
+
+      <div class="weeks">
+
+        <div class="week">
+
+          <strong>Semana 1</strong>
+
+          <p>
+            Construindo o hábito e aumentando as oportunidades
+            de o cachorro acertar.
+          </p>
+
+        </div>
+
+
+        <div class="week">
+
+          <strong>Semana 2</strong>
+
+          <p>
+            Criando previsibilidade e entendendo melhor
+            a rotina do cachorro.
+          </p>
+
+        </div>
+
+
+        <div class="week">
+
+          <strong>Semana 3</strong>
+
+          <p>
+            Fortalecendo o comportamento e ajustando
+            o banheiro aos poucos.
+          </p>
+
+        </div>
+
+
+        <div class="week">
+
+          <strong>Semana 4</strong>
+
+          <p>
+            Consolidando o aprendizado e aumentando
+            a liberdade gradualmente.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- O QUE VOCÊ VAI APRENDER -->
+
+  <section class="section learn">
+
+    <div class="container">
+
+      <h2>
+        O que você vai aprender
+      </h2>
+
+      <div class="learn-list">
+
+        <div class="learn-item">
+          ✓ Como preparar o banheiro do seu cachorro
+        </div>
+
+        <div class="learn-item">
+          ✓ Como facilitar os acertos
+        </div>
+
+        <div class="learn-item">
+          ✓ Como identificar os momentos certos para levar ele ao banheiro
+        </div>
+
+        <div class="learn-item">
+          ✓ O que fazer quando ele errar
+        </div>
+
+        <div class="learn-item">
+          ✓ Como aumentar a liberdade sem perder o progresso
+        </div>
+
+        <div class="learn-item">
+          ✓ Como resolver os principais erros durante o treinamento
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA FINAL -->
+
+  <section class="final" id="comprar">
+
+    <div class="container">
+
+      <h2>
+        Chega de ficar tentando adivinhar o que fazer.
+      </h2>
+
+      <p>
+        Siga um método organizado e saiba qual deve ser
+        o próximo passo no treinamento do seu cachorro.
+      </p>
+
+      <a
+        href="https://chk.eduzz.com/v23mbarw"
+        class="cta">
+        QUERO ENTRAR NO PLANO DE 4 SEMANAS
+      </a>
+
+      <p class="note">
+        As 4 semanas são a estrutura do treinamento.
+        Cada cachorro pode precisar de mais ou menos tempo para aprender.
+      </p>
+
+    </div>
+
+  </section>
+
+
+</body>
+</html>
