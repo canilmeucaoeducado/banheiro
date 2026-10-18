@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#fffaf5">
+  <meta name="color-scheme" content="light">
 
   <title>Plano de 4 Semanas | Xixi e Cocô no Lugar Certo</title>
 
@@ -77,6 +78,23 @@
 
     .hero-cta {
       margin-top: 28px;
+    }
+
+    .hero-video {
+      width: 375px;
+      max-width: 100%;
+      margin: 0 auto;
+      border: 1px solid #eee;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .hero-video video {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #000;
     }
 
     .hero-credit {
@@ -249,8 +267,10 @@
       transition: border-color .3s;
     }
 
-    .proof-card:hover {
-      border-color: #f2c9a4;
+    @media (hover: hover) {
+      .proof-card:hover {
+        border-color: #f2c9a4;
+      }
     }
 
     .proof-card img {
@@ -287,7 +307,9 @@
       transition: background .2s;
     }
 
-    .proof-arrow:hover { background: #fff0df; }
+    @media (hover: hover) {
+      .proof-arrow:hover { background: #fff0df; }
+    }
     .proof-arrow-prev { left: 12px; }
     .proof-arrow-next { right: 12px; }
 
@@ -544,7 +566,7 @@
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .cta, .proof-dot { transition: none; }
+      .cta, .proof-dot, .proof-card { transition: none; }
     }
 
     @media (max-width: 768px) {
@@ -561,6 +583,12 @@
 
       .hero-cta {
         margin-top: 24px;
+      }
+
+      .hero-video {
+        width: min(325px, 84vw);
+        margin-top: 24px;
+        border-radius: 14px;
       }
 
       .hero-credit {
@@ -738,6 +766,12 @@ window.addEventListener('load', function() {
         está na hora de seguir um caminho diferente.
       </p>
 
+      <div class="hero-video">
+        <video controls playsinline preload="metadata" aria-label="Depoimento em vídeo">
+          <source src="https://canilmeucaoeducado.github.io/banheiro/video_depoimento_1.mp4#t=0.1" type="video/mp4">
+        </video>
+      </div>
+
       <div class="hero-cta">
         <a
           href="https://chk.eduzz.com/v23mbarw"
@@ -893,7 +927,7 @@ window.addEventListener('load', function() {
         </div>
 
         <div class="proof-card">
-          <img src="https://canilmeucaoeducado.github.io/banheiro/depoimento%201.webp" alt="Depoimento 1" loading="eager" decoding="async" draggable="false">
+          <img src="https://canilmeucaoeducado.github.io/banheiro/depoimento%201.webp" alt="Depoimento 1" loading="lazy" decoding="async" draggable="false">
         </div>
 
         <div class="proof-card">
@@ -1003,6 +1037,14 @@ window.addEventListener('load', function() {
 
 
   <script>
+    // Só um vídeo toca por vez (evita áudio sobreposto no celular)
+    document.addEventListener('play', function (e) {
+      if (!(e.target instanceof HTMLVideoElement)) return;
+      document.querySelectorAll('video').forEach(function (v) {
+        if (v !== e.target && !v.paused) v.pause();
+      });
+    }, true);
+
     document.addEventListener('DOMContentLoaded', function () {
       var carousel = document.getElementById('proofCarousel');
       var dotsWrap = document.getElementById('proofDots');
